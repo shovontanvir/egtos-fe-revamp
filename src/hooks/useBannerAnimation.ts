@@ -21,10 +21,8 @@ export const useBannerAnimation = (
 
           const tl = gsap.timeline({ repeat: -1 });
 
-          // Initial State
           tl.set(".bubble-r", { autoAlpha: 0 });
 
-          // 1. The Entry Path (Desktop uses full height, Mobile might be shorter)
           tl.to(".bubble-l", {
             duration: isDesktop ? 1.2 : 0.8,
             motionPath: {
@@ -35,16 +33,15 @@ export const useBannerAnimation = (
             ease: "easeInOut",
           })
             .addLabel("split")
-            // Snap rotation to 90deg at the end of the first drop so it aligns to the split point
             .set(".bubble-l", { rotation: 90 }, "split")
             .set(".bubble-r", { autoAlpha: 1, rotation: -90 }, "split");
 
           // 2. The Split Paths
-          // Revert rotation on the edge drops
+
           tl.to(
             ".bubble-l",
             {
-              duration: isDesktop ? 3 : 2, // Quicker travel on smaller screens
+              duration: isDesktop ? 3 : 2,
               motionPath: {
                 path: "#left-path",
                 align: "#left-path",
@@ -70,7 +67,6 @@ export const useBannerAnimation = (
               "split",
             )
 
-            // 3. Fade out
             .to(".bubble", { autoAlpha: 0, duration: 0.5 });
 
           return () => {};
