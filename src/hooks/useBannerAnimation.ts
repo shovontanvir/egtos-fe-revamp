@@ -13,7 +13,6 @@ export const useBannerAnimation = (
 
       mm.add(
         {
-          // Define our breakpoints
           isDesktop: "(min-width: 1024px)",
           isMobile: "(max-width: 1023px)",
         },
@@ -27,7 +26,7 @@ export const useBannerAnimation = (
 
           // 1. The Entry Path (Desktop uses full height, Mobile might be shorter)
           tl.to(".bubble-l", {
-            duration: isDesktop ? 1.2 : 0.8, // Faster drop on mobile
+            duration: isDesktop ? 1.2 : 0.8,
             motionPath: {
               path: "#entry-path",
               align: "#entry-path",
