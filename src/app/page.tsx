@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import LightAnimation from "@/components/LightAnimation";
 import About from "@/components/about/About";
 import Solutions from "@/components/solution/Solution";
+import WhyDifferent from "@/components/whydifferent/WhyDifferent";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <LightAnimation />
       <About />
       <Solutions />
+      <WhyDifferent />
     </main>
   );
 }
