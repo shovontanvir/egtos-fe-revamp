@@ -3,6 +3,9 @@ import LightAnimation from "@/components/LightAnimation";
 import About from "@/components/about/About";
 import Solutions from "@/components/solution/Solution";
 import WhyDifferent from "@/components/whydifferent/WhyDifferent";
+import Benefit from "@/components/benefit/Benefit";
+import Value from "@/components/unlockthevalue/UnlockValue";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -11,6 +14,9 @@ export default function Home() {
       <About />
       <Solutions />
       <WhyDifferent />
+      <Benefit />
+      <Value />
+      <Footer />
     </main>
   );
 }
