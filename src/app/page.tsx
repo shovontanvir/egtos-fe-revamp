@@ -6,6 +6,7 @@ import WhyDifferent from "@/components/whydifferent/WhyDifferent";
 import Benefit from "@/components/benefit/Benefit";
 import Value from "@/components/unlockthevalue/UnlockValue";
 import Footer from "@/components/Footer";
+import WorkProsses from "@/components/workprosses/WorkProsses";
 
 export default function Home() {
   return (
@@ -13,10 +14,12 @@ export default function Home() {
       <LightAnimation />
       <About />
       <Solutions />
+      <WorkProsses />
       <WhyDifferent />
       <Benefit />
       <Value />
       <Footer />
+
     </main>
   );
 }

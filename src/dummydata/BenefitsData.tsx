@@ -35,5 +35,6 @@ const BenefitData = [
     imgSrc: "/specialistscard.svg",
     imgAlt: "Specialists card",
   },
-] 
+];
+
 export default BenefitData;

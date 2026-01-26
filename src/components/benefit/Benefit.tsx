@@ -13,7 +13,7 @@ const Benefit = () => {
         <div className="flex justify-center">
           <Badge
             classname="border-white/30 bg-[linear-gradient(91deg,rgba(0,208,191,0.2)_0%,rgba(0,208,191,0)_100%),linear-gradient(90deg,rgba(0,0,0,0.24)_0%,rgba(0,0,0,0.08)_100%)] text-white mb-4"
-            title="Key benefits"
+            title="Key benefits of the egtos platform"
             icon={
               <span className="relative inline-flex h-5 w-5 items-center justify-center">
                 <span className="absolute h-full w-full animate-ping rounded-full bg-[#00D0BF]/35" />

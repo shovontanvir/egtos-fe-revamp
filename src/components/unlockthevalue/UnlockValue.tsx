@@ -27,8 +27,7 @@ const CtaSection = () => {
           </h2>
 
           <p className="mt-5 max-w-2xl text-sm md:text-base text-white/70">
-            Insights on capacity management, private networks, and enterprise collaboration delivered
-            occasionally and thoughtfully.
+            Insights on capacity management, private networks, and enterprise collaborationdelivered occasionally and thoughtfully.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
@@ -36,7 +35,7 @@ const CtaSection = () => {
               Request a Demo <ArrowRight size={18} />
             </button>
 
-            <button className="inline-flex items-center gap-2 rounded-full border border-primary-500 bg-white/0 px-6 py-3 text-sm font-medium text-primary-500 backdrop-blur-md">
+            <button className="inline-flex items-center gap-2 rounded-full border border-primary-500 bg-white/0 px-6 py-3 text-sm font-medium text-primary-500 backdrop-blur-md cu">
               Talk to Our Team <ArrowRight size={18} />
             </button>
           </div>
