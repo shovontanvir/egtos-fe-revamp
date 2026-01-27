@@ -13,8 +13,18 @@ const Footer = () => {
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 opacity-45 [background-size:48px_48px] [background-image:linear-gradient(to_right,rgba(2,132,199,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(2,132,199,0.08)_1px,transparent_1px)]" />
         <div className="absolute inset-0 opacity-30 [background-size:120px_100%] [background-image:linear-gradient(to_right,rgba(2,132,199,0.06)_1px,transparent_1px)]" />
-        <div className="absolute left-1/2 bottom-[-1%] h-[520px] w-[820px] -translate-x-1/2 rounded-full bg-cyan-200/35 blur-3xl" />
-      </div>
+        <div
+        className="
+            absolute left-1/2 -translate-x-1/2
+            bottom-[-10%]
+            h-[clamp(260px,42vh,560px)]
+            w-[clamp(340px,92vw,900px)]
+            rounded-full
+            bg-cyan-200/35
+            blur-3xl
+        "
+        />
+        </div>
 
       <div className="relative w-full px-6 py-12 md:px-12 md:py-16">
         {/* top row: logo + menus */}
