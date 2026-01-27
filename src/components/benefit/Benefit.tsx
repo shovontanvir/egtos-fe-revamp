@@ -1,14 +1,18 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Badge from "../Badge";
 import BenefitCard from "./BenefitCard";
 import BenefitData from "../../dummydata/BenefitsData";
+import { useBenefitAnimation } from "@/hooks/useBenefitAnimation";
 
 const Benefit = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  useBenefitAnimation(sectionRef);
+
   return (
-    <section className="relative w-full bg-white p-[2.5%]">
-      <div className="w-full rounded-2xl bg-[#002425] p-6 md:p-10 lg:p-14">
+    <section ref={sectionRef} className="relative w-full bg-white p-[2.5%]">
+      <div className="w-full rounded-2xl bg-primary-900 p-6 md:p-10 lg:p-14">
         {/* Header */}
         <div className="flex justify-center">
           <Badge
@@ -29,22 +33,24 @@ const Benefit = () => {
             Core Benefits <br /> You’ll Gain
           </h2>
           <p className="mt-4 text-sm md:text-base text-white/75">
-            Discover how the platform creates value for enterprises, consulting firms, and independent
-            specialists by turning expertise and unused capacity into real business outcomes.
+            Discover how the platform creates value for enterprises, consulting
+            firms, and independent specialists by turning expertise and unused
+            capacity into real business outcomes.
           </p>
         </div>
 
         {/* Cards */}
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {BenefitData.map((item) => (
-            <BenefitCard
-              key={item.id}
-              pill={item.pill}
-              title={item.title}
-              bullets={item.bullets}
-              imgSrc={item.imgSrc}
-              imgAlt={item.imgAlt}
-            />
+            <div key={item.id} className="benefit-card">
+              <BenefitCard
+                pill={item.pill}
+                title={item.title}
+                bullets={item.bullets}
+                imgSrc={item.imgSrc}
+                imgAlt={item.imgAlt}
+              />
+            </div>
           ))}
         </div>
       </div>
