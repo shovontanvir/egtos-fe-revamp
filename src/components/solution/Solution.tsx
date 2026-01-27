@@ -1,8 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Badge from "../Badge";
 import Image from "next/image";
+import { useSolutionAnimation } from "@/hooks/useSolutionAnimation";
 
 const IMAGES = {
   main: "/smaincard.svg",
@@ -11,10 +12,14 @@ const IMAGES = {
   bottom: "/s3card.svg",
 };
 
-
 export default function SolutionSection() {
+  const scope = useRef<HTMLElement>(null);
+  useSolutionAnimation(scope);
   return (
-    <section className="relative w-full overflow-hidden bg-slate-50 py-20">
+    <section
+      ref={scope}
+      className="relative z-10 w-full overflow-hidden bg-slate-50 py-20"
+    >
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 opacity-40 [background-size:48px_48px] [background-image:linear-gradient(to_right,rgba(2,132,199,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(2,132,199,0.08)_1px,transparent_1px)]" />
         <div className="absolute inset-0 opacity-35 [background-size:120px_100%] [background-image:linear-gradient(to_right,rgba(2,132,199,0.06)_1px,transparent_1px)]" />
@@ -33,14 +38,15 @@ export default function SolutionSection() {
             }
           />
         </div>
-        
+
         <div className="mx-auto mt-6 max-w-3xl text-center">
           <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-slate-900">
             The egtos Solution
           </h2>
           <p className="mt-4 text-sm md:text-base text-slate-600">
-            egtos enables companies to create and participate in private trading networks where
-            excess capacity, skills, and expertise can be exchanged using tokens.
+            egtos enables companies to create and participate in private trading
+            networks where excess capacity, skills, and expertise can be
+            exchanged using tokens.
           </p>
         </div>
 
@@ -51,38 +57,60 @@ export default function SolutionSection() {
             {/* MAIN IMAGE */}
             <div className="relative w-full">
               <div className="relative h-[280px] md:h-[350px] w-full overflow-hidden rounded-2xl">
-                <Image src={IMAGES.main} alt="Solution visual" fill priority className="object-contain" />
+                <Image
+                  src={IMAGES.main}
+                  alt="Solution visual"
+                  fill
+                  priority
+                  className="object-contain"
+                />
               </div>
             </div>
 
             {/* LEFT IMAGE */}
             <div className="pointer-events-none absolute -left-10 top-[-100] hidden md:block">
               <div className="relative h-44 w-60 overflow-hidden rounded-2xl">
-                <Image src={IMAGES.left} alt="Solution visual" fill className="object-contain" />
+                <Image
+                  src={IMAGES.left}
+                  alt="Solution visual"
+                  fill
+                  className="object-contain"
+                />
               </div>
             </div>
 
             {/* RIGHT IMAGE */}
             <div className="pointer-events-none absolute -right-28 top-14 hidden md:block">
               <div className="relative h-56 w-80 overflow-hidden rounded-2xl">
-                <Image src={IMAGES.right} alt="Solution visual" fill className="object-contain" />
+                <Image
+                  src={IMAGES.right}
+                  alt="Solution visual"
+                  fill
+                  className="object-contain"
+                />
               </div>
             </div>
 
             {/* BOTTOM IMAGE */}
             <div className="pointer-events-none absolute -left-10 -bottom-32 hidden md:block">
               <div className="relative h-56 w-80 overflow-hidden rounded-2xl">
-                <Image src={IMAGES.bottom} alt="Solution visual" fill className="object-contain" />
+                <Image
+                  src={IMAGES.bottom}
+                  alt="Solution visual"
+                  fill
+                  className="object-contain"
+                />
               </div>
             </div>
           </div>
 
           {/* LEFT CALLOUT GROUP */}
           <div className="absolute left-0 top-0 hidden md:block space-y-4">
-            <Callout>Maintain governance, confidentiality, and compliance</Callout>
+            <Callout>
+              Maintain governance, confidentiality, and compliance
+            </Callout>
             <p className="text-sm font-light text-slate-600">
-              Where collaboration comes first, <br />
-              — not marketplace noise.
+              Where collaboration comes first, <br />— not marketplace noise.
             </p>
           </div>
 
@@ -103,7 +131,9 @@ export default function SolutionSection() {
 
           {/* MOBILE CALLOUTS */}
           <div className="absolute left-0 right-0 bottom-0 md:hidden space-y-3">
-            <Callout>Maintain governance, confidentiality, and compliance</Callout>
+            <Callout>
+              Maintain governance, confidentiality, and compliance
+            </Callout>
             <Callout>Control who sees and accesses capacity</Callout>
             <Callout>Invite and accept trusted companies</Callout>
             <Callout>Trade real expertise not generic resources</Callout>
