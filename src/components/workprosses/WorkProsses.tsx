@@ -50,7 +50,7 @@ export default function WorkProsses() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionEl,
-          start: "top top",
+          start: "bottom bottom",
           end: () => `+=${totalScrollDistance}`,
           scrub: 1.5,
           pin: true,
