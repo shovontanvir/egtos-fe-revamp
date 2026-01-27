@@ -11,14 +11,15 @@ export const useSolutionAnimation = (scope: RefObject<HTMLElement | null>) => {
       const section = scope.current;
       if (!section) return;
 
-      const pinDistance = () => window.innerHeight * 2;
+      const pinDistance = () => window.innerHeight * 1.5;
 
       gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top top",
+          start: "bottom bottom",
           end: () => `+=${pinDistance()}`,
           pin: true,
+          pinSpacing: false,
           scrub: 0.5,
           anticipatePin: 1,
           invalidateOnRefresh: true,
