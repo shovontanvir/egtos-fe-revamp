@@ -38,7 +38,6 @@ export default function About() {
                   </h2>
                 </div>
 
-                {/* subtitle card */}
                 <div className="rounded-2xl bg-white/15 px-4 py-3 text-white/80 backdrop-blur-xl ring-1 ring-white/20">
                   <p className="text-xs leading-relaxed md:text-sm">
                     From strategy and transformation to IT, operations, and niche
@@ -48,24 +47,23 @@ export default function About() {
               </div>
             </div>
 
-            {/* RIGHT / BOTTOM GLASS */}
             <div className="md:col-span-6 md:flex md:items-end md:justify-end">
               <div className="w-full max-w-md rounded-2xl bg-white/15 p-5 text-white backdrop-blur-xl ring-1 ring-white/20">
                 <div className=" font-semibold text-2xl text-white/90">
                   egtos is designed for:
                 </div>
 
-                <ul className="mt-4 text-xs text-white/75 md:text-sm">
+                <ul className="mt-4 text-white/75 md:text-sm">
                     {designedFor.map((text) => (
                     <li
                         key={text}
-                        className="flex items-start gap-3 rounded-lg px-3 py-2"
+                        className="flex items-start gap-3 rounded-lg py-1"
                     >
-                        <span className="shrink-0 mt-0.5">
+                        <span className="shrink-0">
                             <Image src="/tick.svg" alt="" width={20} height={20} />
                         </span>
 
-                        <span className="font-thin text-sm md:text-base leading-snug">
+                        <span className="font-thin text-xs md:text-base leading-snug">
                             {text}
                         </span>
                     </li>
@@ -74,8 +72,7 @@ export default function About() {
               </div>
             </div>
 
-            {/* Optional: subtle edge vignette for depth */}
-            <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]" />
+            {/* <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]" /> */}
           </div>
         </div>
       </div>
