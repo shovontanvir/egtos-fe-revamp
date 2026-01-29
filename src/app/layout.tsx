@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${ppNeueMontreal.variable} antialiased`}
+        className={`${inter.variable} ${ppNeueMontreal.variable} antialiased overflow-x-hidden`}
       >
         {children}
       </body>
