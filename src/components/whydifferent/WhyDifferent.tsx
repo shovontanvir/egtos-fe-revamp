@@ -50,11 +50,19 @@ export default function WhyDifferentSection() {
             </div>
           </div>
 
-          {/* CARD 1 */}
           <div className="md:col-span-4">
-            <div className="relative h-[320px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)] md:h-[360px]">
-              <Image src="/wd1card.png" alt="Card 1" fill className="object-cover" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+            <div className="h-[320px] md:h-[360px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)]">
+              <div className="relative h-[70%] w-full">
+                <Image
+                  src="/wd1card.png"
+                  alt="Card 1"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                />
+              </div>
+
+              <div className="h-[30%] px-6 py-5">
                 <h3 className="text-lg font-semibold text-black md:text-xl">
                   Human-Centric Resilience
                 </h3>
@@ -67,9 +75,18 @@ export default function WhyDifferentSection() {
 
           {/* CARD 2 */}
           <div className="md:col-span-4">
-            <div className="relative h-[320px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)] md:h-[360px]">
-              <Image src="/wd2card.png" alt="Card 2" fill className="object-cover" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+            <div className="h-[320px] md:h-[360px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)]">
+              <div className="relative h-[70%] w-full">
+                <Image
+                  src="/wd2card.png"
+                  alt="Card 2"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                />
+              </div>
+
+              <div className="h-[30%] px-6 py-5 flex flex-col justify-end">
                 <h3 className="text-lg font-semibold text-black md:text-xl">
                   Trusted Networks
                 </h3>
@@ -82,9 +99,18 @@ export default function WhyDifferentSection() {
 
           {/* CARD 3 */}
           <div className="md:col-span-4">
-            <div className="relative h-[320px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)] md:h-[360px]">
-              <Image src="/wd3card.png" alt="Card 3" fill className="object-cover" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+            <div className="h-[320px] md:h-[360px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)]">
+              <div className="relative h-[70%] w-full">
+                <Image
+                  src="/wd3card.png"
+                  alt="Card 3"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                />
+              </div>
+
+              <div className="h-[30%] px-6 py-5 flex flex-col justify-end">
                 <h3 className="text-lg font-semibold text-black md:text-xl">
                   Tokenized Collaboration
                 </h3>
@@ -97,9 +123,18 @@ export default function WhyDifferentSection() {
 
           {/* CARD 4 */}
           <div className="md:col-span-4">
-            <div className="relative h-[320px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)] md:h-[360px]">
-              <Image src="/wd4card.png" alt="Card 4" fill className="object-cover" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+            <div className="h-[320px] md:h-[360px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)]">
+              <div className="relative h-[70%] w-full">
+                <Image
+                  src="/wd4card.png"
+                  alt="Card 4"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                />
+              </div>
+
+              <div className="h-[30%] px-6 py-5 flex flex-col justify-end">
                 <h3 className="text-lg font-semibold text-black md:text-xl">
                   Enterprise-Grade Assurance
                 </h3>
@@ -109,6 +144,7 @@ export default function WhyDifferentSection() {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
