@@ -68,6 +68,7 @@ const CtaSection = () => {
             tag="p"
             className="mt-5 max-w-2xl text-sm md:text-base text-white/70"
             delay={0.5}
+            type="word"
           >
             Insights on capacity management, private networks, and enterprise
             collaboration delivered occasionally and thoughtfully.
