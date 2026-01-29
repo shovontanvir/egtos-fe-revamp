@@ -20,26 +20,26 @@ export default function WhyDifferentSection() {
             title="A Private Network for Trading Expertise and Capacity"
             icon={
               <span className="p-1.25 bg-primary-400 rounded-full animate-pingk">
-                <span className="block w-1.5 h-1.5 rounded-full bg-primary-800 animate-ping" />
+                <span className="block h-1.5 w-1.5 rounded-full bg-primary-800 animate-ping" />
               </span>
             }
           />
         </div>
 
         <div className="mx-auto mt-6 max-w-3xl text-center">
-          <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-slate-900">
+          <h2 className="text-4xl font-semibold tracking-tight text-slate-900 md:text-6xl">
             Why egtos Is Different
           </h2>
-          <p className="mt-4 text-sm md:text-base text-slate-600">
-
-            egtos enables companies to create and participate in private trading networks where
-            excess capacity, skills, and expertise can be exchanged using tokens.
+          <p className="mt-4 text-sm text-slate-600 md:text-base">
+            egtos enables companies to create and participate in private trading networks where excess
+            capacity, skills, and expertise can be exchanged using tokens.
           </p>
         </div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-12">
-           <div className="md:col-span-8">
-            <div className="relative h-[320px] md:h-[360px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)]">
+          {/* MAIN */}
+          <div className="md:col-span-8">
+            <div className="relative h-[320px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)] md:h-[360px]">
               <Image
                 src="/wdmaincard.png"
                 alt="Why different main"
@@ -50,48 +50,63 @@ export default function WhyDifferentSection() {
             </div>
           </div>
 
+          {/* CARD 1 */}
           <div className="md:col-span-4">
-            <div className="relative h-[320px] md:h-[360px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)]">
-              <Image
-                src="/wd1card.png"
-                alt="Why different card"
-                fill
-                className="object-cover"
-              />
+            <div className="relative h-[320px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)] md:h-[360px]">
+              <Image src="/wd1card.png" alt="Card 1" fill className="object-cover" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-lg font-semibold text-black md:text-xl">
+                  Human-Centric Resilience
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-black/85">
+                  Reduce the need for mass layoffs by redeploying talent where it’s needed most.
+                </p>
+              </div>
             </div>
           </div>
 
-          
+          {/* CARD 2 */}
           <div className="md:col-span-4">
-            <div className="relative h-[320px] md:h-[360px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)]">
-              <Image
-                src="/wd2card.png"
-                alt="Why different card"
-                fill
-                className="object-cover"
-              />
+            <div className="relative h-[320px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)] md:h-[360px]">
+              <Image src="/wd2card.png" alt="Card 2" fill className="object-cover" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-lg font-semibold text-black md:text-xl">
+                  Trusted Networks
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-black/85">
+                  Operate inside pre-cleared private networks designed for control, compliance, and quality.
+                </p>
+              </div>
             </div>
           </div>
 
+          {/* CARD 3 */}
           <div className="md:col-span-4">
-            <div className="relative h-[320px] md:h-[360px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)]">
-              <Image
-                src="/wd3card.png"
-                alt="Why different card"
-                fill
-                className="object-cover"
-              />
+            <div className="relative h-[320px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)] md:h-[360px]">
+              <Image src="/wd3card.png" alt="Card 3" fill className="object-cover" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-lg font-semibold text-black md:text-xl">
+                  Tokenized Collaboration
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-black/85">
+                  Exchange skills and capacity using tokens—making internal redeployment measurable and efficient.
+                </p>
+              </div>
             </div>
           </div>
 
+          {/* CARD 4 */}
           <div className="md:col-span-4">
-            <div className="relative h-[320px] md:h-[360px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)]">
-                <Image  
-                  src="/wd4card.png"
-                  alt="Why different card"
-                  fill
-                  className="object-cover"
-                />
+            <div className="relative h-[320px] w-full overflow-hidden rounded-3xl bg-white/35 ring-1 ring-white/50 shadow-[0_18px_60px_rgba(15,23,42,0.08)] md:h-[360px]">
+              <Image src="/wd4card.png" alt="Card 4" fill className="object-cover" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-lg font-semibold text-black md:text-xl">
+                  Enterprise-Grade Assurance
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-black/85">
+                  Built-in screening and governance so you can scale expertise without sacrificing standards.
+                </p>
+              </div>
             </div>
           </div>
         </div>
