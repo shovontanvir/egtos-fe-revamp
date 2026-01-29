@@ -17,7 +17,7 @@ const bullets = [
 const Hero = () => {
   return (
    <section
-         className="relative w-full h-[50vh] md:h-screen xl:h-[110vh] bg-primary-900 overflow-hidden pl-48 py-24"
+         className="relative w-full h-[50vh] md:h-screen xl:h-[100vh] bg-primary-900 overflow-hidden pl-48 py-24"
        >
          <Image
            src="/aboutbg-grid.png"

@@ -9,12 +9,25 @@ const IMAGES = {
   left: "/s1card.svg",
   right: "/s2card.svg",
   bottom: "/s3card.svg",
+   bg: "/solutionbg.svg",
 };
 
 
 export default function SolutionSection() {
   return (
     <section className="relative w-full overflow-hidden bg-slate-50 py-20">
+
+      <div className="pointer-events-none absolute inset-0 ">
+        <Image
+          src={IMAGES.bg}
+          alt="Solution background"
+          fill
+          priority
+          className="object-cover "
+          sizes="50vw"
+        />
+      </div>
+      
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 opacity-40 [background-size:48px_48px] [background-image:linear-gradient(to_right,rgba(2,132,199,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(2,132,199,0.08)_1px,transparent_1px)]" />
         <div className="absolute inset-0 opacity-35 [background-size:120px_100%] [background-image:linear-gradient(to_right,rgba(2,132,199,0.06)_1px,transparent_1px)]" />
