@@ -4,11 +4,14 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 export const useBannerAnimation = (
   scope: React.RefObject<HTMLDivElement | null>,
+  shouldStart: boolean = true,
 ) => {
   gsap.registerPlugin(MotionPathPlugin);
 
   useGSAP(
     () => {
+      if (!shouldStart) return;
+
       const mm = gsap.matchMedia();
 
       mm.add(
@@ -73,6 +76,6 @@ export const useBannerAnimation = (
         },
       );
     },
-    { scope: scope },
+    { scope: scope, dependencies: [shouldStart] },
   );
 };
