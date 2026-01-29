@@ -22,7 +22,7 @@ const SplitText: React.FC<SplitTextProps> = ({
   tag: Tag = "div",
   type = "letter",
 }) => {
-  const comp = useRef<HTMLElement>(null); // Reference to the container element
+  const comp = useRef<HTMLDivElement>(null); // Reference to the container element
   const elementsRef = useRef<(HTMLSpanElement | null)[]>([]);
 
   useGSAP(
