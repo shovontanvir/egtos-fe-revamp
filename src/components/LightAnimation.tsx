@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useBannerAnimation } from "@/hooks/useBannerAnimation";
 import Image from "next/image";
 import Badge from "./Badge";
@@ -7,7 +7,15 @@ import { ArrowRight, Circle, CircleArrowRight } from "lucide-react";
 
 const LightAnimation = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  useBannerAnimation(containerRef);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new window.Image();
+    img.src = "/banner-bg.svg";
+    img.onload = () => setIsLoaded(true);
+  }, []);
+
+  useBannerAnimation(containerRef, isLoaded);
   return (
     <section
       ref={containerRef}

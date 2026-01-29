@@ -6,40 +6,64 @@ import { RefObject } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 export const useAboutAnimation = (scope: RefObject<HTMLElement | null>) => {
-  useGSAP(() => {
-    const section = scope.current;
-    if (!section) return;
+  useGSAP(
+    () => {
+      const section = scope.current;
+      if (!section) return;
 
-    const videoWrapper = section.querySelector(".video-wrapper") as HTMLElement | null;
-    if (!videoWrapper) return;
+      const videoWrapper = section.querySelector(
+        ".video-wrapper > div",
+      ) as HTMLElement;
+      if (!videoWrapper) return;
 
-    gsap.set(videoWrapper, {
-      width: "86vw",
-      borderRadius: "2rem",
-      willChange: "width,border-radius",
-    });
+      // Animation timeline
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1,
+          markers: false,
+        },
+      });
 
-    const pinDistance = () => window.innerHeight * 1.1;
+      // Video stays at 90% while text scrolls through
+      tl.to(
+        videoWrapper,
+        {
+          width: "90vw",
+          height: "90vh",
+          duration: 4,
+          ease: "none",
+        },
+        0,
+      );
 
-    const tl = gsap.timeline({
-      defaults: { ease: "none" },
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: () => `+=${pinDistance()}`,
-        pin: true,
-        scrub: 0.5,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-      },
-    });
+      // After text passes, video expands to 100%
+      tl.to(
+        videoWrapper,
+        {
+          width: "100vw",
+          height: "100vh",
+          borderRadius: "0rem",
+          duration: 2,
+          ease: "power2.inOut",
+        },
+        4,
+      );
 
-    tl.to(videoWrapper, { width: "94vw", borderRadius: "1.25rem", duration: 1 }).to(videoWrapper, {
-      width: "100vw",
-      borderRadius: "0rem",
-      duration: 1,
-    });
-
-    ScrollTrigger.refresh();
-  }, { scope });
+      // Hold at 100% for next section parallax
+      tl.to(
+        videoWrapper,
+        {
+          width: "100vw",
+          height: "100vh",
+          duration: 4,
+          ease: "none",
+        },
+        6,
+      );
+    },
+    { scope },
+  );
 };
