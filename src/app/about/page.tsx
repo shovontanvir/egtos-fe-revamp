@@ -14,7 +14,7 @@ const About = () => {
       <Economy />
       <SwissGlobal />
       <Collaboration />
-      <ConsultantQuality />\
+      <ConsultantQuality />
       <BringsTogather />
       {/* <Footer /> */}
 

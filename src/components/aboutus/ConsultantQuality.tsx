@@ -5,13 +5,13 @@ import Image from "next/image";
 import Badge from "../Badge";
 
 const ASSETS = {
-  floatingProfile: "/aboutherotop.png", // big card image (React Developer)
-  indexScore: "/index.png",            // small index score image
+  floatingProfile: "/cq1card.png", 
+  indexScore: "/index.png",            
 };
 
 export default function ConsultantQuality() {
   return (
-    <section className="relative w-full bg-white">
+    <section className="relative w-full bg-[#F4F7F9]">
       <div className="">
         {/* <div className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 opacity-35 [background-size:48px_48px] [background-image:linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]" />
@@ -21,9 +21,9 @@ export default function ConsultantQuality() {
         <div className="relative px-6 py-10 md:px-12 md:py-12">
           <div className="grid items-start gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
-              <div className="pl-20">
+              <div className="px-5 md:pl-20">
                 <Badge
-                classname="bg-[linear-gradient(91deg,rgba(0,208,191,0.20)_0%,rgba(0,208,191,0)_100%),linear-gradient(90deg,rgba(0,0,0,0.24)_0%,rgba(0,0,0,0.08)_100%)] text-white mb-5"
+                classname="border-white/60 bg-[linear-gradient(135deg,rgba(255,255,255,0.55)_0%,rgba(255,255,255,0.18)_40%,rgba(255,255,255,0.08)_100%),rgba(244,247,249,0.22)] text-slate-700 shadow-[0_18px_50px_rgba(15,23,42,0.12)] backdrop-blur-xl ring-1 ring-white/30 mb-4 text-black mb-5"
                 title="A Private Network for Trading Expertise and Capacity"
                 icon={
                   <span className="relative inline-flex h-5 w-5 items-center justify-center">
@@ -35,48 +35,57 @@ export default function ConsultantQuality() {
               />
               </div>
 
-              <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-[#EEFFFC] md:text-5xl pl-20">
+              <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-black md:text-5xl md:pl-20 md:text-left">
                 Independent Consultant <br className="hidden md:block" />
                 Screening &amp; Quality Assurance
               </h2>
 
-              <p className="mt-4 max-w-3xl text-sm leading-relaxed text-white/65 md:text-base pl-20">
+              <p className="mt-4 max-w-3xl text-sm leading-relaxed text-[#4D5662] md:text-base md:pl-20">
                 egtos applies a structured screening and clearance process for all independent consultants
                 participating on the platform. As part of this process, egtos uses IndexScore®, a
                 comprehensive candidate assessment score designed to support enterprise-grade quality,
                 risk mitigation, and delivery confidence.
               </p>
 
-              <div className="relative mt-8">
-                <div className="relative overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10">
-                  <div className="relative h-[260px] w-full md:h-[450px]">
-                    <video
-                      className="h-full w-full object-cover"
-                      src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
+              <div className="relative mt-8 px-1 md:pl-[26%]">
+                <div
+                  className="
+                    relative overflow-hidden bg-white/5 ring-1 ring-white/10
+                    rounded-[11.69px]
+                    w-[380px] h-[242.67px]
+                    md:w-[684px] md:h-[480px]
+                  "
+                >
+                  <video
+                    className="h-full w-full object-cover"
+                    src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  />
+                  <div className="absolute inset-0 bg-black/20" />
+                </div>
+
+                <div
+                  className="
+                    absolute -left-10 -top-16
+                    w-[180px] h-[250px]
+                    md:-left-10 md:-top-12
+                    md:w-[450px] md:h-[350px]
+                  "
+                >
+                  <div className="relative h-full w-full overflow-hidden rounded-2xl">
+                    <Image
+                      src={ASSETS.floatingProfile}
+                      alt="Consultant profile card"
+                      fill
+                      className="object-contain"
+                      sizes="(min-width: 768px) 320px, 150px"
+                      priority
                     />
-                    <div className="absolute inset-0 bg-black/20" />
                   </div>
                 </div>
-
-                <div className="absolute -left-2 top-8 w-[220px] md:-left-6 md:top-10 md:w-[280px]">
-                  <div className="relative overflow-hidden rounded-2xl shadow-[0_24px_70px_rgba(0,0,0,0.45)] ring-1 ring-white/10">
-                    <div className="relative h-[140px] w-full md:h-[170px]">
-                      <Image
-                        src={ASSETS.floatingProfile}
-                        alt="Consultant profile card"
-                        fill
-                        className="object-contain"
-                        sizes="(min-width: 768px) 280px, 220px"
-                        priority
-                      />
-                    </div>
-                  </div>
-                </div>
-
               </div>
             </div>
 
@@ -95,13 +104,13 @@ export default function ConsultantQuality() {
                     </div>
                   </div>
 
-                  <p className="text-left text-sm leading-relaxed text-white/65">
+                  <p className="text-left text-sm leading-relaxed text-[#4D5662]">
                     IndexScore provides a standardized evaluation framework that goes beyond traditional
                     CV-based vetting, enabling organizations to engage external specialists with greater
                     assurance.
                   </p>
 
-                  <button className="mt-5 inline-flex items-center justify-start rounded-full bg-[#00D0BF] px-5 py-2.5 text-sm font-semibold text-[#002425]">
+                  <button className="mt-5 inline-flex items-center justify-start rounded-full bg-[#00D0BF] px-5 py-2.5 text-sm font-semibold text-white">
                     Get started
                   </button>
                 </div>
