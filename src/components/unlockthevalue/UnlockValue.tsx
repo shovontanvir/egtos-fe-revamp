@@ -6,6 +6,7 @@ import SplitText from "../SplitText";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,7 +44,14 @@ const CtaSection = () => {
     <section className="relative w-full bg-white p-[2.5%]">
       <div className="relative w-full overflow-hidden rounded-3xl bg-primary-900 px-6 py-16 md:px-14 md:py-20 shadow-[0_30px_80px_rgba(2,6,23,0.18)]">
         <div className="pointer-events-none absolute inset-0 opacity-60">
-          <div className="absolute inset-0 bg-size-[56px_56px] bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]" />
+          <Image
+            src="/white-grid.png"
+            alt=""
+            fill
+            priority={false}
+            className="object-cover"
+            sizes="100vw"
+          />
 
           <div className="absolute left-1/2 top-[-15%] h-130 w-205 -translate-x-1/2 rounded-full bg-emerald-400/25 blur-3xl" />
 

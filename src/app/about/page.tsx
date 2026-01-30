@@ -5,16 +5,18 @@ import Collaboration from '../../components/aboutus/Collaboration'
 import ConsultantQuality from '../../components/aboutus/ConsultantQuality'
 import BringsTogather from '../../components/aboutus/BringsTogather'
 import Footer from '@/components/Footer'
+import SwissGlobal from '@/components/aboutus/SwissGlobal'
 
 const About = () => {
   return (
     <div>
       <Hero />
       <Economy />
+      <SwissGlobal />
       <Collaboration />
       <ConsultantQuality />\
       <BringsTogather />
-      <Footer />
+      {/* <Footer /> */}
 
     </div>
 

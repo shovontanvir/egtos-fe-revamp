@@ -11,19 +11,19 @@ const ASSETS = {
 
 export default function ConsultantQuality() {
   return (
-    <section className="relative w-full bg-white p-[2.5%]">
-      <div className="relative w-full overflow-hidden rounded-2xl bg-[#002425]  py-24">
-        <div className="pointer-events-none absolute inset-0">
+    <section className="relative w-full bg-white">
+      <div className="">
+        {/* <div className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 opacity-35 [background-size:48px_48px] [background-image:linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]" />
           <div className="absolute inset-0 opacity-25 [background-size:120px_100%] [background-image:linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px)]" />
-        </div>
+        </div> */}
 
         <div className="relative px-6 py-10 md:px-12 md:py-12">
           <div className="grid items-start gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
               <div className="pl-20">
                 <Badge
-                classname="border-primary-800 bg-[linear-gradient(91deg,rgba(0,208,191,0.20)_0%,rgba(0,208,191,0)_100%),linear-gradient(90deg,rgba(0,0,0,0.24)_0%,rgba(0,0,0,0.08)_100%)] text-white mb-5"
+                classname="bg-[linear-gradient(91deg,rgba(0,208,191,0.20)_0%,rgba(0,208,191,0)_100%),linear-gradient(90deg,rgba(0,0,0,0.24)_0%,rgba(0,0,0,0.08)_100%)] text-white mb-5"
                 title="A Private Network for Trading Expertise and Capacity"
                 icon={
                   <span className="relative inline-flex h-5 w-5 items-center justify-center">

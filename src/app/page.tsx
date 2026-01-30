@@ -17,7 +17,7 @@ export default function Home() {
       <WhyDifferent />
       <Benefit />
       <Value />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

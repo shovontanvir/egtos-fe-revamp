@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const inter = Inter({
@@ -45,6 +46,7 @@ export default function RootLayout({
         className={`${inter.variable} ${ppNeueMontreal.variable} antialiased overflow-x-hidden`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );

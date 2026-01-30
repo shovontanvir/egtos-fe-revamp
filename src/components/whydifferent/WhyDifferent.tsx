@@ -7,11 +7,11 @@ import Image from "next/image";
 export default function WhyDifferentSection() {
   return (
     <section className="relative w-full overflow-hidden bg-slate-50 py-20">
-      <div className="pointer-events-none absolute inset-0">
+      {/* <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 opacity-40 bg-size-[48px_48px] bg-[linear-gradient(to_right,rgba(2,132,199,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(2,132,199,0.08)_1px,transparent_1px)]" />
         <div className="absolute inset-0 opacity-35 [background-size:120px_100%] [background-image:linear-gradient(to_right,rgba(2,132,199,0.06)_1px,transparent_1px)]" />
         <div className="absolute left-1/2 top-1/2 h-[900px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-200/20 blur-3xl" />
-      </div>
+      </div> */}
 
       <div className="relative mx-auto max-w-7xl px-4 md:px-8">
         <div className="flex justify-center">
