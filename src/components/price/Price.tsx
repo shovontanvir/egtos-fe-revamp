@@ -1,7 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Badge from "../Badge";
+import Image from "next/image";
+import { usePricingAnimation } from "@/hooks/usePricingAnimation";
 
 type Plan = {
   id: string;
@@ -83,20 +85,20 @@ const PLANS: Plan[] = [
 
 function CheckItem({ text }: { text: string }) {
   return (
-    <li className="flex items-start gap-3 text-[12px] leading-relaxed text-white/75 md:text-xs">
-      <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-white/10 ring-1 ring-white/15">
-        <span className="h-2.5 w-2.5 rounded-full bg-[#00D0BF]" />
-      </span>
-      <span>{text}</span>
+    <li className="flex items-start gap-3 text-[12px] leading-relaxed text-white md:text-xs">
+      <Image src="/whitetick.svg" alt="" width={24} height={24} />
+      <span className="text-[14px] text-white ">{text}</span>
     </li>
   );
 }
 
 export default function Pricing() {
+  const scope = useRef<HTMLElement | null>(null);
+  usePricingAnimation(scope);
+
   return (
-    <section className="relative w-full">
-      <div className="relative w-full overflow-hidden bg-[#002425] p-6 md:p-10 lg:p-14">
-        {/* grid background */}
+    <section ref={scope} className="relative w-full">
+      <div className="relative w-full overflow-hidden bg-primary-900 p-6 md:p-10 lg:p-14">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 opacity-35 [background-size:48px_48px] [background-image:linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]" />
           <div className="absolute inset-0 opacity-25 [background-size:120px_100%] [background-image:linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px)]" />
@@ -119,56 +121,58 @@ export default function Pricing() {
           </div>
 
           <div className="mx-auto mt-6 max-w-4xl text-center">
-            <h2 className="text-4xl font-semibold tracking-tight text-[#EEFFFC] md:text-6xl">
+            <h2 className="text-2xl font-bold tracking-tight text-[#EEFFFC] md:text-6xl">
               Pricing Built for <br className="hidden md:block" />
               Enterprise Collaboration
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-sm text-white/65 md:text-base">
+            <p className="mx-auto mt-4 max-w-2xl text-[12px] text-[#C5D4DC] md:text-lg font-[400px]">
               Flexible pricing designed around private networks, secure engagement, and real business
               scale pay for value, not headcount.
             </p>
           </div>
 
-          {/* cards */}
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {PLANS.map((p) => (
               <div
                 key={p.id}
-                className="relative overflow-hidden rounded-3xl bg-[#003234] p-6 ring-1 ring-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.25)] md:p-7"
+                className="pricing-card rounded-3xl bg-linear-to-b from-primary-50 to-primary-900 p-0.5"
               >
-                {/* save ribbon */}
-                <div className="absolute right-[-62px] top-[26px] rotate-45 bg-[#F5C400] px-16 py-2 text-[11px] font-semibold text-[#002425] shadow-md">
+                <div className="relative overflow-hidden rounded-[calc(var(--radius-3xl)-2px)] bg-[#003234]/90 backdrop-blur-xl p-6 md:p-7">
+
+                <div className="absolute -right-15.5 top-6.5 rotate-45 bg-[#FFBF00] px-16 py-2 text-[18px] font-medium text-primary-900 shadow-md">
                   {p.save}
                 </div>
 
                 <div className="space-y-2">
-                  <div className="text-lg font-semibold text-[#EEFFFC] md:text-xl">{p.name}</div>
-                  <div className="text-[12px] text-white/65">{p.tag}</div>
+                  <div className=" font-bold text-[#EEFFFC] text-3xl">{p.name}</div>
+                  <div className="text-[16px] font-[400px] text-white/65">{p.tag}</div>
                 </div>
+                <div className="mt-5 h-[0.5px] w-full bg-primary-700/60"></div>
 
                 <div className="mt-5">
                   <div className="flex items-end gap-2">
-                    <div className="text-3xl font-semibold text-[#EEFFFC] md:text-4xl">
+                    <div className="text-3xl font-semibold text-[#EEFFFC] md:text-heading-3">
                       {p.price}
                     </div>
-                    <div className="pb-1 text-xs text-white/70">
-                      {p.per} <span className="text-white/55">{p.monthly}</span>
+                    <div className="pb-1 text-[18px]  text-white">
+                      {p.per} <span className="text-white">{p.monthly}</span>
                     </div>
                   </div>
-                  <div className="mt-1 text-[11px] text-white/55">{p.note}</div>
+                  <div className="mt-1 text-[16px] font-light text-white">{p.note}</div>
                 </div>
 
-                <button className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#002425]">
+                <button className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#0A5753]">
                   Get started <span className="ml-2">→</span>
                 </button>
 
-                <div className="mt-3 text-center text-[10.5px] text-white/45">
+                <div className="mt-3 text-center font-light text-[14px] text-[#C5FFF7]">
                   No setup fees • Cancel anytime • 100% satisfaction guarantee
                 </div>
 
-                {/* Feature box */}
-                <div className="mt-6 rounded-2xl bg-[#00292A] p-5 ring-1 ring-white/10">
-                  <div className="text-[12px] font-semibold text-[#EEFFFC]">Feature</div>
+                <div className="mt-5 h-[0.5px] w-full bg-primary-700/60"></div>
+
+                <div className="mt-6 rounded-2xl bg-primary-900 p-5 ring-1 ring-white/10">
+                  <div className="text-[20px] font-bold  text-[#EEFFFC]">Feature</div>
                   <ul className="mt-4 space-y-3">
                     {p.features.map((f) => (
                       <CheckItem key={f} text={f} />
@@ -176,14 +180,15 @@ export default function Pricing() {
                   </ul>
                 </div>
 
-                {/* Token included box */}
-                <div className="mt-5 rounded-2xl bg-[#00292A] p-5 ring-1 ring-white/10">
-                  <div className="text-[12px] font-semibold text-[#EEFFFC]">{p.tokenTitle}</div>
-                  <div className="mt-2 text-xl font-semibold text-[#EEFFFC] md:text-2xl">
+                <div className="mt-5 rounded-2xl bg-primary-900 p-5 ring-1 ring-white/10">
+                  <div className="text-[20px] font-bold text-[#EEFFFC]">{p.tokenTitle}</div>
+                  <div className="mt-2 font-bold text-[#EEFFFC] text-3xl">
                     {p.tokens}
                   </div>
-                  <div className="mt-1 text-[11px] text-white/55">{p.tokenWorth}</div>
+                  <div className="mt-1 text-[14px] text-[#C5D4DC]">{p.tokenWorth}</div>
                 </div>
+                </div>
+                {/* save ribbon */}
               </div>
             ))}
           </div>

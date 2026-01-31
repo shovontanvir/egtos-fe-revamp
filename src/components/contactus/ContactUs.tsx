@@ -170,7 +170,7 @@ export default function ContactPage() {
 
                 <div className="space-y-2">
                   <label className="text-xs font-medium text-white/70">Phone number</label>
-                  <div className="flex overflow-hidden rounded-xl bg-white/5 ring-1 ring-white/10">
+                  <div className="flex overflow-hidden  rounded-xl bg-white/5 ring-1 ring-white/10">
                     <select
                       value={form.countryCode}
                       onChange={onChange("countryCode")}
