@@ -87,7 +87,7 @@ export default function ContactPage() {
 
   return (
     <section className="relative w-full overflow-hidden">
-      <div className="relative w-full overflow-hidden bg-[#002425]">
+      <div className="relative w-full overflow-hidden md:px-12 bg-primary-900 ">
         <div className="pointer-events-none absolute inset-0 ">
             {/* <Image src="/aboutbg-grid.png" alt="White grid background" fill className="object-center" /> */}
           
@@ -96,7 +96,7 @@ export default function ContactPage() {
           {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.35)_72%,rgba(0,0,0,0.55)_100%)]" /> */}
         </div>
 
-        <div className="relative m-6 rounded-3xl  border-2 border-white/25 p-6 md:m-10 md:p-10">
+        <div className="relative m-6 rounded-3xl  border-2 p-6 md:m-10 md:p-10">
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-5">
               <Badge
@@ -116,10 +116,10 @@ export default function ContactPage() {
               </h1>
 
               <p className="mt-4 max-w-md text-sm leading-relaxed text-white/60">
-                Our team is ready to answer questions and share how egtos can support your organization.
+                Our team is ready to answer questions and share how <br /> egtos can support your organization.
               </p>
 
-              <div className="md:mt-[41%] mt-5 space-y-3">
+              <div className="md:mt-[44%] mt-5 space-y-3">
                 <ContactCard
                   icon={<Mail size={18} className="text-[#00D0BF]  " />}
                   label="Email Us"

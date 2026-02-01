@@ -19,11 +19,13 @@ export default function About() {
       <div className="video-wrapper absolute left-1/2 top-1/2 h-[72vh] w-[86vw] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[2rem]">
         <video
           className="h-full w-full object-cover"
-          src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4"
+          src="/videos/About us_Built for the real economy.mp4"
           autoPlay
           muted
           loop
           playsInline
+          preload="metadata"
+          controls={false}
         />
 
         <div className="absolute inset-0 bg-black/30" />

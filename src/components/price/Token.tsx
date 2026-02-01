@@ -144,7 +144,7 @@ function BottomInfoBlock({
       </div>
       <div>
         <div className="text-[20px] font-semibold text-primary-900">{title}</div>
-        <p className="mt-1 text-[18px] leading-relaxed text-gray-600">{desc}</p>
+        <p className="mt-1 text-[18px] font-normal leading-relaxed text-gray-600">{desc}</p>
       </div>
     </div>
   );
@@ -180,7 +180,7 @@ export default function TokenPackagesSection() {
           </div>
         </div>
 
-        <div className="mt-14 overflow-hidden rounded-2xl bg-[#f5f8fa] shadow-[0_12px_40px_rgba(2,6,23,0.06)]">
+        <div className="mt-14 overflow-hidden rounded-2xl bg-[#FFFFFF] shadow-[0_12px_40px_rgba(2,6,23,0.06)]">
           <div className="grid grid-cols-1 md:grid-cols-3">
             <div className="border-b md:border-r md:border-black/5">
               <BottomInfoBlock

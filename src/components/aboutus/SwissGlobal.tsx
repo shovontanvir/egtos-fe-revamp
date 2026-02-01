@@ -59,12 +59,14 @@ export default function SwissPrecisionSection() {
                 w-full aspect-square
                 md:w-[80vh] md:h-[80vh] md:aspect-auto">
                 <video
-                  className="h-full w-full object-cover"
-                  src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
+                    className="h-full w-full object-cover"
+                    src="/videos/About us_Swiss precision global reach.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    controls={false}
                 />
                 <div className="absolute inset-0 bg-black/20" />
 

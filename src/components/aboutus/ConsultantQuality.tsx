@@ -58,11 +58,13 @@ export default function ConsultantQuality() {
                 >
                   <video
                     className="h-full w-full object-cover"
-                    src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4"
+                    src="/videos/About us_independent consultant screening & quality assurance.mp4"
                     autoPlay
                     muted
                     loop
                     playsInline
+                    preload="metadata"
+                    controls={false}
                   />
                   <div className="absolute inset-0 bg-black/20" />
                 </div>
@@ -90,10 +92,10 @@ export default function ConsultantQuality() {
             </div>
 
             <div className="md:col-span-4">
-              <div className="md:pt-124">
+              <div className="md:pt-100">
                 <div className="w-full max-w-sm items-start text-left">
                   <div className="mb-5 overflow-hidden rounded-2xl">
-                    <div className="relative h-[120px] w-full">
+                    <div className="relative h-62.5 w-full">
                       <Image
                         src={ASSETS.indexScore}
                         alt="Your Index Score"
